@@ -8,6 +8,6 @@ WORKDIR /workspace
 RUN git clone https://github.com/avogatio/dotfiles.git
 RUN git clone https://github.com/avogatio/bootkit.git
 
-WORKDIR /bootkit/debian
+WORKDIR bootkit/debian
 
-RUN bash install.sh && source ~/.bashrc
+RUN bash install.sh && bash -c "source ~/.bashrc"
