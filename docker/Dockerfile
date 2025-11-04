@@ -5,6 +5,5 @@ RUN apt update && \
 
 WORKDIR /workspace
 
-RUN [ -z "${GITHUB_TOKEN}" ] && echo "GITHUB_TOKEN is not set"
-RUN git clone https://${GITHUB_TOKEN}@github.com/avogatio/toolkit.git
+RUN if [ -z "${GITHUB_TOKEN}" ]; then echo "GITHUB_TOKEN is not set"; exit 1; fi
 RUN git clone https://${GITHUB_TOKEN}@github.com/avogatio/dotfiles.git
