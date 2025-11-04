@@ -1,2 +1,9 @@
+USER_ICON=\[\e[2m\]\[\e[0m\]
+USER_NAME=\[\e[2m\]\u\[\e[0m\]
+DIR_ARROW=\[\e[38;5;81m\]\[\e[0m\]
+DIR=\[\e[38;5;81m\]\W\[\e[38;5;238m\]
+BRANCH=\[\e[96;48;5;238m\]${PS1_CMD1}\[\e[0;38;5;238m\]
+ENTRY_POINT=\[\e[0m\]󰬪 
+
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'
-PS1='\u  \[\e[38;5;153;3m\]\W\[\e[0m\] \[\e[38;5;183m\]\[\e[0m\] \[\e[38;5;183m\]${PS1_CMD1}\n\[\e[97m\]\\$\[\e[0m\]'
+PS1='${USER_ICON} ${USER_NAME} ${DIR_ARROW} ${DIR}${BRANCH}\n${ENTRY_POINT}'

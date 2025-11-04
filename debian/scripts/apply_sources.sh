@@ -1,6 +1,6 @@
 
 # Applies sources from .bashrc.d
-directory="${HOME}/.bashrc.d")
+directory="${HOME}/.bashrc.d"
 debug=true
 
 # Optional: Enable dotglob to include hidden files
